@@ -1,0 +1,27 @@
+if(keyWentDown("space")){
+    player1.addAnimation("hi",person_attack)
+    if(goblinGroup.displace(player1)){
+      goblinGroup.destroyEach(0)
+      database.ref('/').update({
+        val: val +1
+      });
+
+    }
+    if(goblinGroup1.displace(player1)){
+      goblinGroup1.destroyEach(0)
+      database.ref('/').update({
+        val: val +1
+      });
+    }
+    if(goblinGroup2.displace(player1)){
+      goblinGroup2.destroyEach(0)
+      database.ref('/').update({
+        val: val +1
+      });
+    }
+    
+  } 
+  if(keyWentUp("space")){
+    player1.addAnimation("hi",person_idle)
+  }
+  }
